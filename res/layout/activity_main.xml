@@ -14,4 +14,13 @@
         android:layout_height="wrap_content"
         android:text="@string/switchname" />
 
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/lightswitch"
+        android:layout_below="@+id/lightswitch"
+        android:layout_marginTop="48dp"
+        android:text="@string/reason" />
+
 </RelativeLayout>

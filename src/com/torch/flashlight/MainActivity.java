@@ -4,7 +4,6 @@ import android.hardware.Camera;
 import android.hardware.Camera.Parameters;
 import android.os.Bundle;
 import android.app.Activity;
-import android.view.Menu;
 import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.Switch;
@@ -51,15 +50,14 @@ public class MainActivity extends Activity {
 			    
 			   }
 			  });
-		lightswitch.setChecked(false);
+		lightswitch.setChecked(true);
 	}
     
 	
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
-        return true;
+    protected void onDestroy(){
+    	super.onDestroy();
+    	lightswitch.setChecked(false);
     }
     
 }
